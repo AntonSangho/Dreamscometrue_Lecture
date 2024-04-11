@@ -29,8 +29,14 @@ paginate: true
 
 ---
 
-# 시스템 
+# 시스템 (systēma)
 * 공통된 **목적**을 수행하기 위해 조직화된 요소들의 **집합체**  
+
+###### 출처: [위키피디아](https://ko.wikipedia.org/wiki/%EC%8B%9C%EC%8A%A4%ED%85%9C) 
+---
+
+# 일상 생활에서의 시스템 
+* 아침이면 알람소리를 듣고 일어나고, 일어나서는 전자레인지에 우유와 빵을 데워 아침을 먹고, 잠시 TV를 보다 출근을 한다. 
 
 ---
 
@@ -67,10 +73,30 @@ paginate: true
 
 ---
 
-# 프로그램 = 알고리즘 + 프로그래밍 언어
+# 프로그램은 
+## 디지털 데이터를 입력 받고 디지털 데이터를 출력하는 모든 시스템에서 상상할 수 있는 모든 처리를 가능하게 해주 는 것.
 
 ---
+
+# 프로그램  = 알고리즘 + 프로그래밍 언어
+# 한국어 = 문법 + 단어 
+---
 ![bg fit](img/word_sentence_algorithm.png)
+
+---
+# python 키워드 
+```python
+False      await      else       import     pass
+None       break      except     in         raise
+True       class      finally    is         return
+and        continue   for        lambda     try
+as         def        from       nonlocal   while
+assert     del        global     not        with
+async      elif       if         or         yield
+```
+###### 출처: [realpython](https://realpython.com/python-keywords/) 
+---
+![bg 80%](img/python_operator.png)
 
 ---
 # 알고리즘 예시 -1 
@@ -116,15 +142,55 @@ paginate: true
 print('Hello, world!')
 ```
 ---
+# 컴퓨터에게 말거는 법
+- 컴퓨터가 알아 들을 수 있는 단어를 이용해서 컴퓨터가 이해 할 수 있는 문장을 구성하여 명령을 내리기 
+- 복잡한 명령을 내리기 위해서는 여러개의 문장이 필요하며 문장들은 시스템의 목적에 맞게 구성 
+
+---
+# 알고리즘을 학습하는 과정은? 
+* 컴퓨터의 **문제 해결 방식**과 **절차**를 배우는 것
+
+---
+# 사람의 말을 알아들을 수 있는 컴퓨터가 있다면? 
+
+---
+
+# 프로그래밍 언어와 사람의 언어의 차이 
+* 사람의 언어 : 항상 문법에 맞게 진행되지는 **않는다**는 점이다. 
+* 프로그래밍 언어 : 항상 문법에 **맞게 사용**되어야 한다. 
+
+--- 
 
 # 피지컬 컴퓨팅 실습
 
 ---
 
+# ping 시트
+# https://bit.ly/441vATO 
+
+---
+
+# 코드 저장소 
+# https://bit.ly/49z6Xiq
+
+---
+
+# 데이터 파이 키트 구성품 
+- 데이타파이: PCB + 라즈베리파이 피코 
+- micro-USB 케이블 
+- 코인베터리
+- AA 베터리 2개
+- AA 베터리 케이스
+
+---
+
 # 실습 
 - Thonney IDE 설치
-- u2f 설치  
-- 라이브러리 설치 
-- Blink 
+- python 실습
+- micropython 설치  
+- micropython 실습 
 
+---
 
+# 정리
+- 프로그램으로 무엇을 할 수 있을까? 
