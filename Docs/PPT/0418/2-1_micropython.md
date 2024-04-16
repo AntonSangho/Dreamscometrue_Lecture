@@ -3,20 +3,22 @@
 marp: true
 theme: default
 paginate: true
-#header: 피지컬 컴퓨팅 입문 
+#header: 파이썬 입문
 #footer: 해성여고 
 ---
 <!--paginate: skip -->
 
 ###### 창의융합인재 프로그램 3기  
 
-# 피지컬 컴퓨팅 입문 
+# 마이크로 파이썬 입문 
+## micropython
 
 ---
 
 # 목차 
-- 피지컬 컴퓨핑 입문 
-- 피지컬 컴퓨팅 실습 
+- 마이크로파이썬이란? 
+- Thonny 사용법 
+-  
 
 ---
 <!--paginate: true -->
@@ -137,7 +139,8 @@ async      elif       if         or         yield
 ```
 
 ---
-# 고급 언어 
+# 고급 언어
+###### python 
 ```python
 print('Hello, world!')
 ```
