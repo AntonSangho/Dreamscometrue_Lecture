@@ -30,14 +30,28 @@ footer: 공학도서관
 - 네오픽셀 제어하기 
 ---
 
-## 복습하기 
-1. Thonny의 실행하고 폴더 경로 맞추기 
-2. 데이타 파이 보드 연결하기
-3. micropython 연결하기 
+<!--paginate: true -->
+# 복습하기 
+### Thonny의 실행하고 폴더 경로 맞추기 
+    1. Thonny 실행
+
+    2. 이 컴퓨터 -> C 드라이브 -> Users -> 사용자명 -> Desktop(더블클릭)  
+
+    3. 새로운 디렉토리 -> 'Project' 폴더 생성 
+
+    4. Project 폴더 안 -> '0418_DataPi' 폴더 생성 
+
+    5. 파일 -> 새 파일  
+---
+### Thonny의 실행하고 폴더 경로 맞추기 결과
+![width:10000px ](img/finaloutput.png)
 
 ---
-<!--paginate: true -->
-###### 데이터파이 외관 사진 
+
+# 복습하기 
+
+2. 데이타 파이 보드 연결하기
+3. micropython 연결하기 
 
 ---
 
