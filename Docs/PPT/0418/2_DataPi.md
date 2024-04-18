@@ -246,6 +246,45 @@ while True:
     utime.sleep(0.1)
 ```
 ---
+## 반복문 
+
+: for문에 정해진 범위 안에서 반복하여 동작하도록합니다.
+```python
+fruits = ["apple", "banana", "cherry"]
+
+for x in fruits:
+    print(x)
+```
+
+---
+
+
+### 온도센서 실습
+```python
+import time
+import machine
+import onewire, ds18x20
+
+data = machine.Pin(26)
+temp_wire = onewire.OneWire(data) 
+
+temp_sensor = ds18x20.DS18X20(temp_wire)
+
+roms = temp_sensor.scan()
+print(len(roms), 'temperature sensor found')  
+
+while True:
+    print('temperatures:', end=' ')
+    temp_sensor.convert_temp()
+    time.sleep_ms(100)  
+
+    for rom in roms:
+        t = temp_sensor.read_temp(rom)
+        print('{:6.2f}'.format(t), end=' ')  
+    print()  
+
+```
+---
 
 # 정리
 - 무한 루프 
