@@ -54,4 +54,8 @@ section::after {
   font-weight: bold;
   text-shadow: 1px 1px 0 #ffffff;
 }
+code {
+    font-family: "Cascadia Code";
+
+}
  
