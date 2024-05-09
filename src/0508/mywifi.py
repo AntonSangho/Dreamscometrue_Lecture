@@ -1,8 +1,8 @@
 # wifi information for networksetting()
 
 def networksetting():
-    # Office
-    ssid = 'tresc3-2.4G'
-    password = 'tresc333'
+    # Schoole
+    ssid = 'AI1'
+    password = 'hsg12345'
     return ssid, password
 
