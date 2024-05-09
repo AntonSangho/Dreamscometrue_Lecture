@@ -1,8 +1,5 @@
-from machine import Pin 
 from time import sleep
-#from ds3231_port import DS3231
-from machine import I2C
-import utime as time
+from machine import I2C, Pin
 from bh1750 import BH1750
 
 led = Pin("LED", Pin.OUT)

@@ -191,7 +191,84 @@ while True:
 ---
 
 # 파일 쓰기
-: ADC_BATT_RTC.py 파일을 수정하기
+## 조도센서  
+
+---
+### 파일 쓰기 실습 -1 
+```python
+from time import sleep
+from machine import I2C, Pin
+from bh1750 import BH1750
+```
+- 라이브러리 가져오기 
+
+---
+### 파일 쓰기 실습 -2 
+```python
+led = Pin("LED", Pin.OUT)
+
+sdaPIN = Pin(4)
+sclPIN = Pin(5)
+
+i2c = I2C(0, sda=sdaPIN, scl=sclPIN) 
+
+bh1750 = BH1750(0x23, i2c)
+
+def writeLine(text):
+    file = open("log.txt", "a")
+    file.write(text + "\n")
+    file.close()
+```
+- I2C 연결 
+- 쓰기 함수 
+---
+
+### 파일 쓰기 실습 -3 
+```python
+while True:
+    light = bh1750.measurement     
+    print(light)
+    writeLine(str(light))
+    led.value(1)
+    sleep(0.5)
+    led.value(0)
+    sleep(0.5)
+    #sleep(1800) # 30 minutes
+```
+- 조도센서 값을 반복해서 쓰기
+---
+
+### 파일 쓰기 실습 -완료 
+```python
+from time import sleep
+from machine import I2C, Pin
+from bh1750 import BH1750
+
+led = Pin("LED", Pin.OUT)
+
+sdaPIN = Pin(4)
+sclPIN = Pin(5)
+
+i2c = I2C(0, sda=sdaPIN, scl=sclPIN) 
+
+bh1750 = BH1750(0x23, i2c)
+
+
+def writeLine(text):
+    file = open("log.txt", "a")
+    file.write(text + "\n")
+    file.close()
+ 
+while True:
+    light = bh1750.measurement     
+    print(light)
+    writeLine(str(light))
+    led.value(1)
+    sleep(0.5)
+    led.value(0)
+    sleep(0.5)
+    #sleep(1800) # 30 minutes
+```
 
 
 ---
