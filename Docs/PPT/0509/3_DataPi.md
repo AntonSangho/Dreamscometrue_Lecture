@@ -193,6 +193,13 @@ while True:
 # 통신하기 
 ## RTC 
 
+---
+
+# 준비
+1. DS3231 라이브러리 [다운로드](https://github.com/AntonSangho/Dreamscometrue_Lecture/blob/main/lib/ds3231_port.py) 
+2. Rasberry pi Pico에 lib 폴더에 업로드하기 
+3. ds3231_port.py 파일을 업로드 하기 
+
 
 ---
 ### RTC 통신하기 -1 
