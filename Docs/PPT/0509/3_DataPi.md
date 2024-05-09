@@ -128,13 +128,13 @@ for device in devices:
 
 ---
 
-# 조도 센서 통신하기
-## I2C 사용 
+# 통신하기
+## 조도센서 
 
 
 ---
 # 준비
-1. bh1750 라이브러리 다운로드: ping시트 
+1. bh1750 라이브러리 [다운로드](https://github.com/AntonSangho/Dreamscometrue_Lecture/blob/main/lib/bh1750.py) 
 2. Rasberry pi Pico에 lib 폴더 만들기 
 3. bh1750.py 파일을 업로드 하기 
 
@@ -190,8 +190,78 @@ while True:
 
 ---
 
+# 통신하기 
+## RTC 
+
+
+---
+### RTC 통신하기 -1 
+```python
+import network
+from machine import RTC
+from machine import Pin 
+from machine import I2C
+import utime as time
+import usocket as socket
+import ustruct as struct
+from ds3231_port import DS3231
+```
+- 라이브러리 가져오기 
+
+---
+### RTC 통신하기 -2
+```python
+rtc = RTC()  
+
+sdaPIN = Pin(4) 
+sclPIN = Pin(5) 
+
+i2c = I2C(0, sda=sdaPIN, scl=sclPIN) 
+
+ds3231 = DS3231(i2c) 
+```
+- RTC와 I2C 통신하기
+---
+### RTC 통신하기 -3
+```python
+#ds3231.save_time()  # Set DS3231 from RTC
+print('DS3231 time:', ds3231.get_time())
+print('RTC time:   ', time.localtime())
+```
+- RTC 모듈의 시간정보를 동시화시키고 확인하는 코드
+---
+
+# RTC 통신하기 -완료 
+```python
+import network
+from machine import RTC
+from machine import Pin 
+from machine import I2C
+import utime as time
+import usocket as socket
+import ustruct as struct
+from ds3231_port import DS3231
+
+rtc = RTC()  
+
+sdaPIN = Pin(4) 
+sclPIN = Pin(5) 
+
+i2c = I2C(0, sda=sdaPIN, scl=sclPIN) 
+
+ds3231 = DS3231(i2c) 
+
+# DS3231와 RTC 시간의 차이를 확인하고 싶으면 아래 주석을 하고 실행
+#ds3231.save_time()  # Set DS3231 from RTC
+print('DS3231 time:', ds3231.get_time())
+print('RTC time:   ', time.localtime())
+
+```
+
+---
+
 # 파일 쓰기
-## 조도센서  
+## 조도센서   
 
 ---
 ### 파일 쓰기 실습 -1 
@@ -269,7 +339,6 @@ while True:
     sleep(0.5)
     #sleep(1800) # 30 minutes
 ```
-
 
 ---
 
