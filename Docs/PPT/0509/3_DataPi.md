@@ -71,7 +71,7 @@ footer: 공학도서관
 
 
 ### I2C 실습 -1 
-```python 
+``` python
 from machine import Pin
 from machine import I2C
 ```
