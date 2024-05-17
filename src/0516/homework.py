@@ -1,9 +1,8 @@
 from time import sleep
 from machine import I2C, Pin
-from bh1750 import BH1750
 import onewire, ds18x20
 import time 
-
+from ds3231_port import DS3231
 
 led = Pin("LED", Pin.OUT)
 
@@ -12,7 +11,7 @@ sclPIN = Pin(5)
 
 i2c = I2C(0, sda=sdaPIN, scl=sclPIN) 
 
-bh1750 = BH1750(0x23, i2c)
+ds3231 = DS3231(i2c)
 
 # GPIO 26번 핀에 OneWire 버스를 생성합니다.
 data = machine.Pin(26)
@@ -32,7 +31,7 @@ def writeLine(text):
     file.close()
  
 while True:
-    light = bh1750.measurement     
+    #light = bh1750.measurement     
     #print(light)
     temp_sensor.convert_temp()
     time.sleep_ms(100)
